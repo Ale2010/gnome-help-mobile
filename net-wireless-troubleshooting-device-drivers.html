@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Wireless network troubleshooter</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" language="javascript" src="jquery.js"></script><script type="text/javascript" language="javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"></div>
+<div class="body">
+<div class="links nextlinks"><a class="nextlinks-prev" href="net-wireless-troubleshooting-hardware-check.html" title="Wireless connection troubleshooter">Previous</a></div>
+<div class="hgroup">
+<h1 class="title">Wireless network troubleshooter</h1>
+<h2 class="title">Make sure that working device drivers are installed</h2>
+</div>
+<div class="contents">
+<p class="p">In this step you can check to see if you can get working device drivers for your wireless adapter. A <span class=" em">device driver</span> is a piece of software which tells the computer how to make a hardware device work properly. Even though the wireless adapter has been recognized by the computer, it may not have drivers which work very well. You may be able to find different drivers for the wireless adapter which do work. Try some of the options below:</p>
+<div class="list"><ul class="list">
+<li class="list">
+<p class="p">Check to see if your wireless adapter is on a list of supported devices</p>
+<p class="p">Most Linux distributions keep a list of wireless devices that they have support for. Sometimes, these lists provide extra information on how to get the drivers for certain adapters working properly. Go to the list for your distribution (for example, <span class=" link"><a href="XXXX" title="XXXX">Ubuntu</a></span>, <span class=" link"><a href="XXXX" title="XXXX">Fedora</a></span> or <span class=" link"><a href="XXXX" title="XXXX">openSuSE</a></span>) and see if your make and model of wireless adapter is listed. You may be able to use some of the information there to get your wireless drivers working.</p>
+</li>
+<li class="list">
+<p class="p">Look for restricted (binary) drivers</p>
+<p class="p">Many Linux distributions only come with device drivers which are <span class=" em">free</span> and <span class=" em">open source</span>. This is because they cannot distribute drivers which are proprietary, or closed-source. If the correct driver for your wireless adapter is only available in a non-free, or "binary-only" version, it may not be installed by default. If this is the case, look on the wireless adapter manufacturer's website to see if they have any Linux drivers.</p>
+<p class="p">Some Linux distributions have a tool that can download restricted drivers for you. If your distribution has one of these, use it to see if it can find any wireless drivers for you.</p>
+</li>
+<li class="list">
+<p class="p">Use the Windows drivers for your adapter</p>
+<p class="p">In general, you cannot use a device driver designed for one operating system (like Windows) on another operating system (like Linux). This is because they have different ways of handling devices. For wireless adapters, however, you can install a compatibility layer called <span class=" em">NDISwrapper</span> which lets you use some Windows wireless drivers on Linux. This is useful because wireless adapters almost always have Windows drivers available for them, whereas Linux drivers are sometimes not available. You can learn more about how to use NDISwrapper <span class=" link"><a href="XXXX" title="XXXX">here</a></span>. Note that not all wireless drivers can be used through NDISwrapper.</p>
+</li>
+</ul></div>
+<p class="p">If none of these options work, you may want to try a different wireless adapter to see if you can get that working. USB wireless adapters are often quite cheap, and will plug into any computer. You should check that the adapter is compatible with your Linux distribution before buying it, though.</p>
+</div>
+</div>
+<div class="footer"><div class="copyrights"></div></div>
+</body>
+</html>

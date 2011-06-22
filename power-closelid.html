@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Why does my computer turn off when I close the lid?</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" language="javascript" src="jquery.js"></script><script type="text/javascript" language="javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"><div class="trails">
+<div class="trail">
+<a class="trail" href="index.html"><span class="media media-image"><img src="figures/gnome.png" alt="Help"></span></a> » <a class="trail" href="hardware.html">Hardware</a> » <a class="trail" href="power.html">Power &amp; battery</a> » </div>
+<div class="trail">
+<a class="trail" href="index.html"><span class="media media-image"><img src="figures/gnome.png" alt="Help"></span></a> » <a class="trail" href="prefs.html">Settings</a> » <a class="trail" href="power.html">Power &amp; battery</a> » </div>
+</div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title">Why does my computer turn off when I close the lid?</h1></div>
+<div class="contents">
+<p class="p">When you close the lid of your laptop, your computer will <span class=" em">suspend</span> in order to save power. This means that the computer is not actually turned off - it has just gone to sleep. You can wake it up by opening the lid. If it doesn't wake up, try clicking the mouse or pressing a key. If that still doesn't work, press the power button.</p>
+<p class="p">Some computers are unable to suspend properly, normally because their hardware isn't completely supported by the operating system (e.g. the Linux drivers are incomplete). In this case, you may find that you are unable to wake up your computer after you've closed the lid. You can try to <span class=" link"><a href="power-suspendfail.html" title="">fix the problem with suspend</a></span>, or you can prevent the computer from trying to suspend when you close the lid.</p>
+</div>
+<div class="sect" id="nosuspend">
+<div class="hgroup"><h2 class="title">Stop the computer from suspending when the lid is closed</h2></div>
+<div class="contents">
+<p class="p">If you don't want the computer to suspend when you close the lid, you can change the settings for that behavior.  To set the computer to blank the screen, rather than suspend, when the lid is closed:</p>
+<div class="note note-warning"><div class="inner"><div class="contents"><p class="p">Be very careful if you change this setting. Some laptops can overheat
+   if they are left running with the lid closed, especially if they are in
+   a confined place like a backpack.</p></div></div></div>
+<div class="steps"><ol class="steps">
+<li class="steps"><p class="p">Open the <span class=" app">Terminal</span> application from the <span class=" gui">Activities</span> overview.</p></li>
+<li class="steps">
+<p class="p">To change the setting used when running on battery power, type this command and press <span class=" key">Enter</span>:</p>
+<div class="screen"><pre class="contents ">gsettings set org.gnome.settings-daemon.plugin.power lid-close-battery-action blank</pre></div>
+</li>
+<li class="steps">
+<p class="p">To change the setting used when running on AC power, type this command and press <span class=" key">Enter</span>:</p>
+<div class="screen"><pre class="contents ">gsettings set org.gnome.settings-daemon.plugin.power lid-close-ac-action blank</pre></div>
+</li>
+</ol></div>
+<p class="p">There are other settings available besides "blank," such as "nothing," which causes the computer to do nothing.</p>
+</div>
+</div>
+<div class="sect sect-links">
+<div class="hgroup"><h2>Further Reading</h2></div>
+<div class="contents">
+<div class="links guidelinks">
+<div class="title"><h3><span class="title">More About</span></h3></div>
+<ul><li class="links">
+<a href="power.html">Power &amp; battery</a><span class="desc"> — 
+      <span class=" link"><a href="power-suspendhibernate.html" title="">Suspend</a></span>,
+      <span class=" link"><a href="power-batterylife.html" title="">energy savings</a></span>,
+      <span class=" link"><a href="power-whydim.html" title="">screen dimming</a></span>...
+    </span>
+</li></ul>
+</div>
+<div class="links seealsolinks">
+<div class="title"><h3><span class="title">See Also</span></h3></div>
+<ul><li class="links">
+<a href="power-suspendfail.html">Why won't my computer turn back on after I sent it to sleep?</a><span class="desc"> — Some computer hardware causes problems with suspend/hibernate.</span>
+</li></ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footer"><div class="copyrights"></div></div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Wireless connection troubleshooter</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" language="javascript" src="jquery.js"></script><script type="text/javascript" language="javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"></div>
+<div class="body">
+<div class="links nextlinks">
+<a class="nextlinks-prev" href="net-wireless-troubleshooting-hardware-info.html" title="Wireless network troubleshooter">Previous</a>  |  <a class="nextlinks-next" href="net-wireless-troubleshooting-device-drivers.html" title="Wireless network troubleshooter">Next</a>
+</div>
+<div class="hgroup">
+<h1 class="title">Wireless connection troubleshooter</h1>
+<h2 class="title">Check that the wireless adapter was recognized</h2>
+</div>
+<div class="contents">
+<p class="p">Even though the wireless adapter is connected to the computer, it may not have been recognized as a network device by the computer. In this step, you will check whether the device was recognized properly.</p>
+<div class="steps"><ol class="steps">
+<li class="steps"><p class="p">Open a Terminal window, type <span class=" cmd">lshw -C network</span> and press <span class=" key">Enter</span>. If this gives an error message, you may need to install the <span class=" app">lshw</span> program on your computer.</p></li>
+<li class="steps">
+<p class="p">Look through the information that appeared and find the <span class=" em">Wireless interface</span> section. If your wireless adapter was detected properly, you should see something similar (but not identical) to this:</p>
+<div class="code"><pre class="contents ">*-network
+       description: Wireless interface
+       product: PRO/Wireless 3945ABG [Golan] Network Connection
+       vendor: Intel Corporation</pre></div>
+</li>
+<li class="steps">
+<p class="p">If a wireless device is listed, continue on to the <span class=" link"><a href="net-wireless-troubleshooting-device-drivers.html" title="">Device Drivers step</a></span>.</p>
+<p class="p">If a wireless device is <span class=" em">not</span> listed, the next steps you take will depend on the type of device that you use. Refer to the section below that is relevant to the type of wireless adapter that your computer has (<span class=" link"><a href="#pci" title="">internal PCI</a></span>, <span class=" link"><a href="#usb" title="">USB</a></span>, or <span class=" link"><a href="#pcmcia" title="">PCMCIA</a></span>).</p>
+</li>
+</ol></div>
+</div>
+<div class="sect" id="pci">
+<div class="hgroup"><h2 class="title">PCI (internal) wireless adapter</h2></div>
+<div class="contents">
+<p class="p">Internal PCI adapters are the most common, and are found in most laptops made within the past few years. To check if your PCI wireless adapter was recognized:</p>
+<div class="steps"><ol class="steps">
+<li class="steps"><p class="p">Open a Terminal, type <span class=" cmd">lspci</span> and press <span class=" key">Enter</span>.</p></li>
+<li class="steps">
+<p class="p">Look through the list of devices that is shown and find any that are marked <span class=" code">Network controller</span> or <span class=" code">Ethernet controller</span>. Several devices may be marked in this way; the one corresponding to your wireless adapter might include words like <span class=" code">wireless</span>, <span class=" code">WLAN</span>, <span class=" code">wifi</span> or <span class=" code">802.11</span>. Here is an example of what the entry might look like:</p>
+<div class="code"><pre class="contents ">Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection</pre></div>
+</li>
+<li class="steps"><p class="p">If you found your wireless adapter in the list, proceed to the <span class=" link"><a href="net-wireless-troubleshooting-device-drivers.html" title="">Device Drivers step</a></span>. If you didn't find anything related to your wireless adapter, see <span class=" link"><a href="#not-recognized" title="">the instructions below</a></span>.</p></li>
+</ol></div>
+</div>
+</div>
+<div class="sect" id="usb">
+<div class="hgroup"><h2 class="title">USB wireless adapter</h2></div>
+<div class="contents">
+<p class="p">Wireless adapters that plug into a USB port on your computer are less common. They can plug directly into a USB port, or may be connected by a USB cable. 3G/mobile broadband adapters look quite similar to wireless (wifi) adapters, so if you think you have a USB wireless adapter, double-check that it is not actually a 3G adapter. To check if your USB wireless adapter was recognized:</p>
+<div class="steps"><ol class="steps">
+<li class="steps"><p class="p">Open a Terminal, type <span class=" cmd">lsusb</span> and press <span class=" key">Enter</span>.</p></li>
+<li class="steps">
+<p class="p">Look through the list of devices that is shown and find any that seem to refer to a wireless or network device. The one corresponding to your wireless adapter might include words like <span class=" code">wireless</span>, <span class=" code">WLAN</span>, <span class=" code">wifi</span> or <span class=" code">802.11</span>. Here is an example of what the entry might look like:</p>
+<div class="code"><pre class="contents ">Bus 005 Device 009: ID 12d1:140b Huawei Technologies Co., Ltd. EC1260 Wireless Data Modem HSD USB Card</pre></div>
+</li>
+<li class="steps"><p class="p">If you found your wireless adapter in the list, proceed to the <span class=" link"><a href="net-wireless-troubleshooting-device-drivers.html" title="">Device Drivers step</a></span>. If you didn't find anything related to your wireless adapter, see <span class=" link"><a href="#not-recognized" title="">the instructions below</a></span>.</p></li>
+</ol></div>
+</div>
+</div>
+<div class="sect" id="pcmcia">
+<div class="hgroup"><h2 class="title">Checking for a PCMCIA device</h2></div>
+<div class="contents">
+<p class="p">PCMCIA wireless adapters are typically rectangular cards which slot into the side of your laptop. They are more commonly found in older computers. To check if your PCMCIA adapter was recognized:</p>
+<div class="steps"><ol class="steps">
+<li class="steps"><p class="p">Start your computer <span class=" em">without</span> the wireless adapter plugged in.</p></li>
+<li class="steps">
+<p class="p">Open a Terminal and type the following, then press <span class=" key">Enter</span>:</p>
+<div class="code"><pre class="contents ">tail -f /var/log/messages</pre></div>
+<p class="p">This will display a list of messages related to your computer's hardware, and will automatically update if anything to do with your hardware changes.</p>
+</li>
+<li class="steps"><p class="p">Insert your wireless adapter into the PCMCIA slot and see what changes in the Terminal window. The changes should include some information about your wireless adapter. Look through them and see if you can identify it.</p></li>
+<li class="steps"><p class="p">To stop the command from running in the Terminal, press <span class=" keyseq"><span class=" key">Ctrl</span>+<span class=" key">C</span></span>. After you have done that, you can close the Terminal if you like.</p></li>
+<li class="steps"><p class="p">If you found any information about your wireless adapter, proceed to the <span class=" link"><a href="net-wireless-troubleshooting-device-drivers.html" title="">Device Drivers step</a></span>. If you didn't find anything related to your wireless adapter, see <span class=" link"><a href="#not-recognized" title="">the instructions below</a></span>.</p></li>
+</ol></div>
+</div>
+</div>
+<div class="sect" id="not-recognized">
+<div class="hgroup"><h2 class="title">Wireless adapter was not recognized</h2></div>
+<div class="contents">
+<p class="p">If your wireless adapter was not recognized, it might not be working properly or the correct drivers may not be installed for it. How you check to see if there are any drivers you can install will depend on which Linux distribution you are using (like Ubuntu, Fedora or openSuSE).</p>
+<p class="p">To get specific help, look at the support options on your distribution's website. These might include mailing lists and web chats where you can ask about your wireless adapter, for example.</p>
+</div>
+</div>
+</div>
+<div class="footer"><div class="copyrights"></div></div>
+</body>
+</html>

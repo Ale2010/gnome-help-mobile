@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>File manager list columns preferences</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" language="javascript" src="jquery.js"></script><script type="text/javascript" language="javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body>
+<div class="header"><div class="trails">
+<div class="trail">
+<a class="trail" href="index.html"><span class="media media-image"><img src="figures/gnome.png" alt="Help"></span></a> » <a class="trail" href="files.html">Files</a> » <a class="trail" href="nautilus-prefs.html">File manager preferences</a> » </div>
+<div class="trail">
+<a class="trail" href="index.html"><span class="media media-image"><img src="figures/gnome.png" alt="Help"></span></a> » <a class="trail" href="shell-overview.html">Overview</a> › <a class="trail" href="shell-overview.html#files">Files and folders</a> » <a class="trail" href="files.html">Files</a> » <a class="trail" href="nautilus-prefs.html">File manager preferences</a> » </div>
+</div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title">File manager list columns preferences</h1></div>
+<div class="contents">
+<p class="p">There are 12 columns of information that you can display in the file manager's list view. Click <span class=" guiseq"><span class=" gui">Edit</span> ▸ <span class=" gui">Preferences</span></span> and select the <span class=" gui">List Columns</span> tab to select which columns will be visible.</p>
+<div class="note note-tip"><div class="inner"><div class="contents"><p class="p">
+  Use the <span class=" gui">Move Up</span> and <span class=" gui">Move Down</span> buttons to choose the order in which the selected columns will appear.
+</p></div></div></div>
+<div class="terms"><dl class="terms">
+<dt class="terms"><span class=" gui">Name</span></dt>
+<dd class="terms"><p class="p">The name of folders and files in the folder being viewed.</p></dd>
+<dt class="terms"><span class=" gui">Size</span></dt>
+<dd class="terms"><p class="p">The size of a folder is given as the number of items contained in the folder.
+  The size of a file is given as bytes, KB, or MB.</p></dd>
+<dt class="terms"><span class=" gui">Type</span></dt>
+<dd class="terms"><p class="p">Displayed as folder, or file type such as PDF document, JPEG image, MP3 audio, and more.</p></dd>
+<dt class="terms"><span class=" gui">Date Modified</span></dt>
+<dd class="terms"><p class="p">Gives the date and time of the last time the file was modified.</p></dd>
+<dt class="terms"><span class=" gui">Date Accessed</span></dt>
+<dd class="terms"><p class="p">Gives the date and time of the last time the file was accessed.</p></dd>
+<dt class="terms"><span class=" gui">Group</span></dt>
+<dd class="terms"><p class="p">The group the file is owned by. On my home computers, each user is in their
+  own group. Groups are sometimes used in corporate environments, where users
+  might be in groups according to department or project.</p></dd>
+<dt class="terms"><span class=" gui">Location</span></dt>
+<dd class="terms"><p class="p">The path to the location of the file.</p></dd>
+<dt class="terms"><span class=" gui">MIME Type</span></dt>
+<dd class="terms"><p class="p">Displays the MIME type of the item.</p></dd>
+<dt class="terms"><span class=" gui">Permissions</span></dt>
+<dd class="terms">
+<p class="p">Displays the file access permissions e.g. <span class=" gui">drwxrw-r--</span></p>
+<div class="list"><ul class="list">
+<li class="list"><p class="p">The first character <span class=" gui">-</span> is the file type. <span class=" gui">-</span> means regular file and <span class=" gui">d</span> means directory (folder).</p></li>
+<li class="list"><p class="p">The next three characters <span class=" gui">rwx</span> specify permissions for the user who owns the file.</p></li>
+<li class="list"><p class="p">The next three <span class=" gui">rw-</span> specify permissions for all members of the group that owns the file.</p></li>
+<li class="list"><p class="p">The last three characters in the column <span class=" gui">r--</span> specify permissions for all other users on the system.</p></li>
+</ul></div>
+<p class="p">
+    Each character has the following meanings:
+  </p>
+<div class="list"><ul class="list">
+<li class="list"><p class="p"> r : Read permission. </p></li>
+<li class="list"><p class="p"> w : Write permission. </p></li>
+<li class="list"><p class="p"> x : Execute permission. </p></li>
+<li class="list"><p class="p"> - : No permission. </p></li>
+</ul></div>
+</dd>
+<dt class="terms"><span class=" gui">Octal Permissions</span></dt>
+<dd class="terms">
+<p class="p">Displays the file permissions in octal notation prefixed with '40' for folders and '100' for files. In the last three digits,  each digit represents user class, group class and other users respectively.</p>
+<div class="list"><ul class="list">
+<li class="list"><p class="p">Read adds 4 to the total of each of the last three digits.</p></li>
+<li class="list"><p class="p">Write adds 2 to the total.</p></li>
+<li class="list"><p class="p">Execute adds 1 to the total.</p></li>
+</ul></div>
+</dd>
+<dt class="terms"><span class=" gui">Owner</span></dt>
+<dd class="terms"><p class="p">The name of the user the folder or file is owned by.</p></dd>
+<dt class="terms"><span class=" gui">SELinux Context</span></dt>
+<dd class="terms"><p class="p">Displays the SELinux Context of the file, if applicable.</p></dd>
+</dl></div>
+</div>
+<div class="links guidelinks">
+<div class="title"><h3><span class="title">More About</span></h3></div>
+<ul><li class="links"><a href="nautilus-prefs.html">File manager preferences</a></li></ul>
+</div>
+</div>
+<div class="footer"><div class="copyrights"></div></div>
+</body>
+</html>
