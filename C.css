@@ -3,7 +3,7 @@ body {
   margin: 0; 
   padding: 0;
   background-color: #3e6daa;
-	font-size:100%;
+	font-size:200%;
   color: #000000;
   font-family: 'Cantarell', Verdana, Geneva, sans-serif;
 	font-direction: ltr;
@@ -11,25 +11,25 @@ body {
 
 div.header
 {
-	position:relative;
+	position:absolute;
 	top:0px;
 	left:0px;
   /*font-size:150%;*/
 	background-color:#32598b;
-  height:5%;
+  height:1.8em;
 	width:100%;
   margin:0;
   padding:4px;
 	font-weight:bold;
-	font-size:2em;
+
 }
 
 img.logo
 {
 	float:left;
 	clear:left;
-	width: .8em;
-	height: 1em;
+	width: 1.2em;
+	height: 1.7em;
 }
 
 img.search
@@ -38,19 +38,21 @@ img.search
 	float:right;
 	clear:right;
 	/*width: 1.8em;*/
-	height: 4%;
-	top:.3em;
-	right:.8em;
+	top:.1em;
+	right:.3em;
+	width: 1.7em;
+	height: 1.7em;
 }
 
 p.title
  {
-	position:relative;
-	/*width:100%;*/
-	top:0;
-	display:inline;
+	position:absolute;
+	float:left;
+	clear:left;
+	top:-.5em;
+	left: 1.4em;
 	color:#000000;
-	font-size:1em;
+	/*font-size:.5em;*/
 	}
 
 
