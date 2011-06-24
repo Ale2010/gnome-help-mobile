@@ -3,33 +3,33 @@ body {
   margin: 0; 
   padding: 0;
   background-color: #3e6daa;
+	font-size:100%;
   color: #000000;
   font-family: 'Cantarell', Verdana, Geneva, sans-serif;
-	font
-  direction: ltr;
+	font-direction: ltr;
 }
 
 div.header
 {
-  list-style-type:none;
 	position:relative;
 	top:0px;
 	left:0px;
-  font-size:1em;
+  /*font-size:150%;*/
 	background-color:#32598b;
-  height:2em;
+  height:5%;
 	width:100%;
   margin:0;
   padding:4px;
 	font-weight:bold;
+	font-size:2em;
 }
 
 img.logo
 {
 	float:left;
 	clear:left;
-	width: 1.8em;
-	height: 2em;
+	width: .8em;
+	height: 1em;
 }
 
 img.search
@@ -37,22 +37,20 @@ img.search
 	position:absolute;
 	float:right;
 	clear:right;
-	width: 1.8em;
-	height: 1.8em;
+	/*width: 1.8em;*/
+	height: 4%;
 	top:.3em;
 	right:.8em;
 }
 
-p.header
+p.title
  {
-	position:absolute;
-	white-space:nowrap;
-	float:left;
-  clear:left;
-	top:-1.2em;
+	position:relative;
+	/*width:100%;*/
+	top:0;
 	display:inline;
 	color:#000000;
-	font-size:2em;
+	font-size:1em;
 	}
 
 
