@@ -7,6 +7,15 @@ body {
 	font-family: 'Cantarell', Verdana, Geneva, sans-serif;
 }
 
+a:link,a:visited
+{
+	display:block;
+	text-decoration: none;
+	color: #99CCCC;
+	width: 100%;
+	text-align:center;
+	font-size: 1.3em;
+}
 span.header
 {
 	position:fixed;
@@ -20,11 +29,11 @@ span.header
 
 span.title
 {
-	font-size:1.5em;
+	font-size:1.9em;
 	font-weight:bold;
 	position:fixed;
-	top:0;
-	left:1.5em;
+	top:-.15em;
+	left:1.4em;
 	width:100%;
 	z-index:5;	
 	display:inline;
@@ -51,8 +60,34 @@ span.search
 span img
 {
 	width: 1.8em;
-	height: 1.9em;
+	height: 2em;
+}
+
+div.spacer
+{
+	display:block;
+	position:relative;
+	top: 0;
+	left: 0;
+	height: 8em;
+	width: 100%;
+}
+
+a.topic:link,a.topic:visited
+{
+	font-weight: bold;
+	color:#000000;
+	font-size: 1.4em;
 }
 
 
-
+div.topics {
+	font-size: 1.5em;
+	float: left;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #32598b;
+	border-bottom: 1px solid #3373a9;
+	border-top: 1px solid #003867;
+}
