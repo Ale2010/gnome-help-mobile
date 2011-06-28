@@ -1,58 +1,58 @@
 html { height: 100%; }
 body {
-  margin: 0; 
-  padding: 0;
-  background-color: #3e6daa;
-	font-size:200%;
-  color: #000000;
-  font-family: 'Cantarell', Verdana, Geneva, sans-serif;
-	font-direction: ltr;
+	margin: 0; 
+	padding: 0;
+	background-color: #3e6daa;
+	color: #000000;
+	font-family: 'Cantarell', Verdana, Geneva, sans-serif;
 }
 
-div.header
+span.header
 {
-	position:absolute;
+	position:fixed;
 	top:0px;
 	left:0px;
-  /*font-size:150%;*/
 	background-color:#32598b;
-  height:1.8em;
+	height:2.3em;
 	width:100%;
-  margin:0;
-  padding:4px;
+	z-index:0;
+}
+
+span.title
+{
+	font-size:1.5em;
 	font-weight:bold;
-
+	position:fixed;
+	top:0;
+	left:1.5em;
+	width:100%;
+	z-index:5;	
+	display:inline;
 }
 
-img.logo
+span.logo
 {
-	float:left;
-	clear:left;
-	width: 1.2em;
-	height: 1.7em;
+	position:fixed;
+	top: .2em;
+	left: .2em;
+	width:100%;
+	z-index:7;
+	
 }
 
-img.search
+span.search
 {
-	position:absolute;
-	float:right;
-	clear:right;
-	/*width: 1.8em;*/
-	top:.1em;
-	right:.3em;
-	width: 1.7em;
-	height: 1.7em;
+	position:fixed;
+	right: .2em;
+	top: .2em;
+	z-index:7;
 }
 
-p.title
- {
-	position:absolute;
-	float:left;
-	clear:left;
-	top:-.5em;
-	left: 1.4em;
-	color:#000000;
-	/*font-size:.5em;*/
-	}
+span img
+{
+	width: 1.8em;
+	height: 1.9em;
+}
+
 
 
