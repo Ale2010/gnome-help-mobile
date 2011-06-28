@@ -8,6 +8,7 @@
 	<script type="text/javascript" language="javascript" src="jquery.js"></script>
 	<script type="text/javascript" language="javascript" src="jquery.syntax.js"></script>
 	<script type="text/javascript" src="yelp.js"></script>
+	<script type="text/javascript" src="animation.js"></script>
 </head>
 	
 
@@ -16,27 +17,24 @@
 	<span class="header">
 
 
-</span>
+ </span>
 
 <div class="spacer"><p></p></div>
 
-	<span class="title">GNOME Desktop Help</span>
-	<span class="logo"> <img src="foot.png"> </span>
-	<span class="search"><img src="searchicon.png">  </span>
+	<span class="title">Desktop Help </span>
+	<span class="logo"> <img src="foot.png">  </span> 
+	<span class="search"><img src="searchicon.png">   </span>
 	
 	
 
-<div class="contents">
+<div id="contents" class="contents">
 
-<table class="toronto">
+	<div onclick="runAccordion(1);">
 		<div class="topics">
-			<div>
-				<a href="fixme.html" class="topic">Getting Started</a>
-			</div>
+			<a href="fixme.html" class="topics">Getting started</a>
 		</div>
-
-		<div class="subtopics">
-			<div>
+	</div>
+		<div id="subtopics" class="subtopics">
 			<a class="bold" href="shell-introduction.html">
 			Introduction to GNOME
 			</a>
@@ -45,27 +43,23 @@
 			<a class="bold" href="shell-windows.html">Windows and workspaces</a>
 			<a class="bold" href="shell-exit.html">Log out, power off, switch users</a>
 			<a class="bold" href="shell-overview.html">Overview of the desktop</a>
-			</div>
+		</div>
+	<div onclick="runAccordion(2);">
+		<div class="topics" onselectstart="return false;">
+			<a href="web.html" class="topics">Web, email &amp; chat</a>
 		</div>
 
-		<div class="topics">
-			<div>
-				<a href="web.html" class="topic">Web, email &amp; chat</a>
-			</div>
-		</div>
-
-		<div class="subtopics">
-			<div>
+		<div id ="subtopics" class="subtopics">
 			<a href="web.html#connections" title="">Internet connections</a>
-      			<a href="web.html#chat" title="">starting chats</a>
-			<a href="web.html#email" title="">email accounts</a></div>
-			<a href="web.html#browser" title="">plugins</a></div>  
-			</div>
-		</div>
+      			<a href="web.html#chat" title="">Chat (instant messaging)</a>
+			<a href="web.html#email" title="">Email</a>
+			<a href="web.html#browser" title="">Browsing the web</a>
+		</div>  
+	</div>
 
   		<div class="topics">
 			<div>
-				<a href="media.html" class="topic">Sound, video &amp; pictures</a></div>
+				<a href="media.html" class="topics">Sound, video &amp; pictures</a></div>
 
 
 </div>
@@ -80,7 +74,7 @@
 
   		<div class="topics">
 			<div>
-				<a href="files.html" class="topic">Files, folders &amp; search</a>
+				<a href="files.html" class="topics">Files, folders &amp; search</a>
 			</div>
 		</div>
 
@@ -97,76 +91,74 @@
 		</div>
 
 	<div class="topics">
-		<a href="net.html" class="topic">Internet &amp; networking</a>
+		<a href="net.html" class="topics">Internet &amp; networking</a>
 	</div>
 
 </div>
 		</div>
 
-		<div class="subtopics">
-			<div><a href="net.html#problems" title="">Connection problems</a></div> 
-      <div class="link"><a href="net.html#wireless" title="">wireless</a></div> 
-      <div class="link"><a href="net.html#wired" title="">wired</a></div> 
-      <div class="link"><a href="net.html#sharing" title="">sharing files</a></div> 
-      <div class="link"><a href="net.html#security" title="">security</a></div> 
-      <div class="link"><a href="net.html#security" title="">anti-virus</a></div>  
-    </span></div>
-  		<div class="topics">
-			<div>
-				<a href="prefs.html" class="topic">User &amp; system settings</a></div>
+	<div class="subtopics">
+			<a href="net.html#problems" title="">Connection problems</a>
+      		<div class="link"><a href="net.html#wireless" title="">wireless</a></div> 
+      		<div class="link"><a href="net.html#wired" title="">wired</a></div> 
+      		<div class="link"><a href="net.html#sharing" title="">sharing files</a></div> 
+      		<div class="link"><a href="net.html#security" title="">security</a></div> 
+	      	<div class="link"><a href="net.html#security" title="">anti-virus</a></div>
+  
+      </div>
+
+<div class="topics">
+	<a href="prefs.html" class="topics">User &amp; system settings</a>
 </div>
-		</div>
 
 		<div class="subtopics">
-			<div><a href="keyboard.html" title="">Keyboard</a></span> 
-      <div class="link"><a href="mouse.html" title="">mouse</a></span> 
-      <div class="link"><a href="prefs-display.html" title="">display</a></span> 
-      <div class="link"><a href="prefs-language.html" title="">languages</a></span>  
-      <div class="link"><a href="user-accounts.html" title="">user accounts</a></span>  
-    </span></div>
+			<div><a href="keyboard.html" title="">Keyboard</a>
+      <div class="link"><a href="mouse.html" title="">mouse</a> </div> 
+      <div class="link"><a href="prefs-display.html" title="">display</a> </div> 
+      <div class="link"><a href="prefs-language.html" title="">languages</a> </div>  
+      <div class="link"><a href="user-accounts.html" title="">user accounts</a> </div>  
+     </div></div>
   		<div class="topics">
-			<div>
-				<a href="hardware.html" class="topic">Hardware &amp; drivers</a></div>
+				<a href="hardware.html" class="topics">Hardware &amp; drivers</a></div>
 </div>
-		</div>
 
 		<div class="subtopics">
-			<div><a href="hardware.html#problems" title="">Hardware problems</a> </div>
-      <div class="link"><a href="printing.html" title="">printers</a>
-      <div class="link"><a href="power.html" title="">power settings</a>
-      <div class="link"><a href="bluetooth.html" title="">Bluetooth</a>
-      <div class="link"><a href="disk.html" title="">disks</a></div>
-			</div>
+		<a href="hardware.html#problems" title="">Hardware problems</a>
+      <a href="printing.html" title="">printers</a>
+      <a href="power.html" title="">power settings</a>
+      <a href="bluetooth.html" title="">Bluetooth</a>
+      <a href="disk.html" title="">disks</a>
+
 		</div>
 
   		<div class="topics">
-			<a href="a11y.html" class="topic">Universal access</a>
+			<a href="a11y.html" class="topics">Universal access</a>
 		</div>
 
 		<div class="subtopics">
-     			<a href="a11y.html#vision" title="">Seeing</a></div> 
-     		<div class="link">
-			<a href="a11y.html#sound" title="">hearing</a></div> 
-     <div class="link"><a href="a11y.html#mobility" title="">mobility</a></div> 
-     <div class="link"><a href="a11y-braille.html" title="">braille</a></div> 
-     <div class="link"><a href="a11y-mag.html" title="">screen magnifier</a></div>
-
+     			<a href="a11y.html#vision" title="">Seeing</a>
+			<a href="a11y.html#sound" title="">hearing</a>
+			<a href="a11y.html#mobility" title="">mobility</a>			<a href="a11y-braille.html" title="">braille</a>			<a href="a11y-mag.html" title="">screen magnifier</a>
+		</div>
   		<div class="topics">
-			<a href="tips.html" class="topic">Tips &amp; tricks</a></div>
+			<a href="tips.html" class="topics">Tips &amp; tricks</a></div>
 
 <div class="subtopics">
 <a href="tips-specialchars.html" title="">Special characters</a>  
 
-<div class="link"><a href="mouse-middleclick.html" title="">middle click shortcuts</a></div>
+<a href="mouse-middleclick.html" title="">middle click shortcuts</a></div>
 
 	<div class="topics">
-				<a href="more-help.html" class="topic">Get more help</a></div>
+				<a href="more-help.html" class="topics">Get more help</a></div>
 
 <div class="subtopics">
-<div class="link"><a href="about-this-guide.html" title="">Tips on using this guide</a></span>  <div class="link"><a href="get-involved.html" title="">help improve this guide</a></span>  <div class="link"><a href="irc.html" title="">IRC</a></span>  <div class="link"><a href="mailing-list.html" title="">e-mail</a></span>  <div class="link"><a href="user-forum.html" title="">forum  </a>
-</table></div>
+<a href="about-this-guide.html" title="">Tips on using this guide</a> 
+<a href="get-involved.html" title="">help improve this guide</a>  
+<a href="irc.html" title="">IRC</a>
+<a href="mailing-list.html" title="">e-mail</a>
+<a href="user-forum.html" title="">forum  </a>
 </div>
-</div>
+
 <div class="footer"><div class="copyrights"></div></div>
 </body>
 </html>
